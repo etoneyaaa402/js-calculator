@@ -1,0 +1,99 @@
+:root {
+    --bg-color: #f0f0f0;
+    --calc-bg-color: #e0e0e0;
+    --display-bg-color: #fff;
+    --text-color: #333;
+    --button-bg-color: #d0d0d0;
+    --operator-bg-color: #f0ad4e;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --calc-bg-color: #1e1e1e;
+    --display-bg-color: #2a2a2a;
+    --text-color: #fff;
+    --button-bg-color: #3a3a3a;
+    --operator-bg-color: #ff9500;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calculator-container {
+    background-color: var(--calc-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.theme-switcher {
+    margin-bottom: 10px;
+    text-align: right;
+}
+#theme-toggle{
+    width: 15px;
+    height: 15px;
+}
+
+.display {
+    background-color: var(--display-bg-color);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 20px;
+    height: 80px;
+}
+
+.previous-operand {
+    min-height: 24px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+.current-operand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button[data-operator], button[data-equals] {
+    background-color: var(--operator-bg-color);
+}
+
+.span-four {
+    grid-column: span 4;
+}
+
+.span-two {
+    grid-column: span 2;
+}
