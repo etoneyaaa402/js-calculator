@@ -29,9 +29,11 @@ body {
 
 .calculator-container {
     background-color: var(--calc-bg-color);
-    padding: 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 360px;
+    max-width: 95vw;
 }
 
 .theme-switcher {
@@ -45,24 +47,28 @@ body {
 
 .display {
     background-color: var(--display-bg-color);
-    padding: 20px;
+    padding: 15px 20px; 
     border-radius: 5px;
     text-align: right;
-    word-wrap: break-word;
-    word-break: break-all;
-    margin-bottom: 20px;
-    height: 80px;
+    min-height: 50px;
+    margin-bottom: 15px;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
 }
 
 .previous-operand {
     min-height: 24px;
     font-size: 1.5rem;
     opacity: 0.7;
+    margin: 0;
+    line-height: 1;
 }
 
 .current-operand {
     font-size: 2.5rem;
     font-weight: bold;
+    margin: 0;
+    line-height: 1;
 }
 
 .buttons-grid {
